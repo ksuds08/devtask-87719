@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: devtask-87719
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: SECRET_KEY
+        sync: false
+      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+        sync: false
+      - key: ALGORITHM
+        sync: false
+      - key: DATABASE_URL
+        sync: false

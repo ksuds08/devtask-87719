@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>devtask-87719 - Developer Task Tracker</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <nav class="nav">
+        <div class="logo">devtask-87719</div>
+        <div class="nav-links">
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+          <a href="/login" class="btn-outline">Log in</a>
+          <a href="/signup" class="btn-primary">Sign up</a>
+        </div>
+      </nav>
+      <div class="hero-content">
+        <h1>Track developer tasks and time without the overhead.</h1>
+        <p>devtask-87719 helps engineering teams capture tasks, log time, and stay focused on what actually ships.</p>
+        <div class="hero-actions">
+          <a href="/signup" class="btn-primary">Get started</a>
+          <a href="#pricing" class="btn-outline">View pricing</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="features" class="section">
+      <div class="container">
+        <h2>Built for modern development teams</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <h3>Simple task tracking</h3>
+            <p>Create tasks in seconds with lightweight status workflows that match how developers actually work.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Time logging that doesn't get in the way</h3>
+            <p>Log time directly on tasks so you can see where engineering hours are going without extra tools.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Developer-friendly API</h3>
+            <p>Automate task creation and time logging through a clean FastAPI backend.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Secure by default</h3>
+            <p>JWT-based authentication keeps your workspace secure and ready for production.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section section-alt">
+      <div class="container">
+        <h2>Simple, transparent pricing</h2>
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3>Starter</h3>
+            <p class="price">$9<span>/month</span></p>
+            <ul>
+              <li>Up to 5 team members</li>
+              <li>Unlimited tasks</li>
+              <li>Time logging</li>
+              <li>API access</li>
+            </ul>
+            <a href="{{STRIPE_MONTHLY_PAYMENT_LINK}}" class="btn-primary">Start monthly plan</a>
+          </div>
+          <div class="pricing-card highlighted">
+            <h3>Growth</h3>
+            <p class="price">$89<span>/year</span></p>
+            <ul>
+              <li>Up to 25 team members</li>
+              <li>Unlimited projects and tasks</li>
+              <li>Advanced reporting (coming soon)</li>
+              <li>Priority support</li>
+            </ul>
+            <a href="{{STRIPE_YEARLY_PAYMENT_LINK}}" class="btn-primary">Start yearly plan</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="container">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3>Is devtask-87719 ready for production use?</h3>
+            <p>Yes. It is built on FastAPI, SQLAlchemy, and JWT authentication following modern best practices.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Can I export my data?</h3>
+            <p>All your tasks and time logs are accessible via the API, so you can export them into your own tools at any time.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do you offer team plans?</h3>
+            <p>Yes. The Growth plan is designed for small to mid-sized teams that want a simple dev-focused tracker.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Can I cancel anytime?</h3>
+            <p>Absolutely. You can cancel your subscription at any time and your access will continue until the end of the billing period.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>© <span id="year"></span> devtask-87719. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
