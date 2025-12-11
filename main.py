@@ -173,24 +173,24 @@ async def delete_task(
 
 
 # Static files & basic frontend routes
-app.mount("/static", StaticFiles(directory="devtask-87719/static"), name="static")
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
 @app.get("/", include_in_schema=False)
 async def serve_landing() -> FileResponse:
-    return FileResponse("devtask-87719/static/index.html")
+    return FileResponse("static/index.html")
 
 
 @app.get("/dashboard", include_in_schema=False)
 async def serve_dashboard() -> FileResponse:
-    return FileResponse("devtask-87719/static/dashboard.html")
+    return FileResponse("static/dashboard.html")
 
 
 @app.get("/login", include_in_schema=False)
 async def serve_login() -> FileResponse:
-    return FileResponse("devtask-87719/static/login.html")
+    return FileResponse("static/login.html")
 
 
 @app.get("/signup", include_in_schema=False)
 async def serve_signup() -> FileResponse:
-    return FileResponse("devtask-87719/static/signup.html")
+    return FileResponse("static/signup.html")
